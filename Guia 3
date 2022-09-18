@@ -1,0 +1,501 @@
+//CLASE USUARIO (MAIN)
+
+package usuario;
+
+import java.util.Scanner;
+
+public class Usuario {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+                  
+        Scanner leer = new Scanner (System.in);
+        Scanner sc = new Scanner (System.in);
+     
+        int u;
+     
+        System.out.println("COLEGIO SOFT");
+        System.out.println("¿Que tipo de usuario es?");
+        System.out.println("""
+                           1. Estuadiante
+                           2. Docente
+                           3. Administrativo""");
+
+        u = leer.nextInt();
+
+        if (u == 1){
+            System.out.println("Bienvenido estudiante.");
+
+            Estudiante a [] = new Estudiante [1];
+
+            String id;
+            String nombre;
+            int edad;
+            String direccion;
+            String telefono;
+            int año;
+            int pension;
+            String horario;
+            String medtrans;
+
+            for (int i = 0 ; i < a.length ; i++){
+                System.out.println("Ingrese su ID:");
+                id = sc.nextLine();
+                System.out.println("Ingrese su nombre:");
+                nombre = sc.nextLine();
+                System.out.println("Ingrese su edad:");
+                edad = leer.nextInt();
+                System.out.println("Ingrese su direccion:");
+                direccion = sc.nextLine();
+                System.out.println("Ingrese su telefono:");
+                telefono = sc.nextLine();
+                System.out.println("Ingrese su año que cursa:");
+                año = leer.nextInt();
+                System.out.println("Ingrese su pension:");
+                pension = leer.nextInt();
+                System.out.println("Ingrese su horario.");
+                horario = sc.nextLine();
+                System.out.println("Ingrese su mededio de transporte(taxi, bus, ruta, caminando, bicicleta, etc):");
+                medtrans = sc.nextLine();
+
+                a [i] = new Estudiante (id, nombre, edad, direccion, telefono, año, pension, horario, medtrans);
+            }
+
+            for(int i = 0 ; i < a.length ; i++){
+                System.out.println("ESPECIFICACIONES:\n" + "\n ID: "+a [i].getid ()+"\n Nombre: "+ a [i].getnombre()+"\n Edad: "+ a [i].getedad()+"\n Direccion: "+ a [i].getdireccion()+"\n Telefonon: "+ a [i].gettelefono()+"\n Año que cursa: "+ a [i].getaño()+"\n Pension: "+ a [i].getpension()+"\n Horario: "+ a [i].gethorario()+"\n Medio de transporte: "+ a [i].getmedtrans());
+            }
+        }
+
+        if (u == 2){
+            System.out.println("Bienvenido docente.");
+
+            Administrativo b [] = new Administrativo [1];
+
+            String id;
+            String nombre;
+            int edad;
+            String direccion;
+            String telefono;
+            String asignatura;
+            String contrato;
+            String horario;
+            String medtrans;
+
+            for (int i = 0 ; i < b.length ; i++){
+                System.out.println("Ingrese su ID:");
+                id = sc.nextLine();
+                System.out.println("Ingrese su nombre:");
+                nombre = sc.nextLine();
+                System.out.println("Ingrese su edad:");
+                edad = leer.nextInt();
+                System.out.println("Ingrese su direccion:");
+                direccion = sc.nextLine();
+                System.out.println("Ingrese su telefono:");
+                telefono = sc.nextLine();
+                System.out.println("Ingrese su area de trabajo:");
+                asignatura = sc.nextLine();
+                System.out.println("Ingrese su tipo de contrato:");
+                contrato = sc.nextLine();
+                System.out.println("Ingrese su horario.");
+                horario = sc.nextLine();
+                System.out.println("Ingrese su mededio de transporte(taxi, bus, moto, carro, caminando, bicicleta, etc):");
+                medtrans = sc.nextLine();
+
+                b [i] = new Administrativo (id, nombre, edad, direccion, telefono, asignatura, contrato, horario, medtrans);
+            }
+
+            for(int i = 0 ; i < b.length ; i++){
+                System.out.println("ESPECIFICACIONES:\n" + "\n ID: "+b [i].getid ()+"\n Nombre: "+ b [i].getnombre()+"\n Edad: "+ b [i].getedad()+"\n Direccion: "+ b [i].getdireccion()+"\n Telefono: "+ b [i].gettelefono()+"\n Area de trabajo: "+ b [i].getaretra()+"\n Contrato: "+ b [i].getcontrato()+"\n Horario: "+ b [i].gethorario()+"\n Medio de transporte: "+ b [i].getmedtrans());
+            }
+        }
+        if(u == 3){
+            System.out.println("Bienvenido administrativo.");
+
+            Administrativo c [] = new Administrativo [1];
+
+            String id;
+            String nombre;
+            int edad;
+            String direccion;
+            String telefono;
+            String aretra;
+            String contrato;
+            String horario;
+            String medtrans;
+
+            for (int i = 0 ; i < c.length ; i++){
+                System.out.println("Ingrese su ID:");
+                id = sc.nextLine();
+                System.out.println("Ingrese su nombre:");
+                nombre = sc.nextLine();
+                System.out.println("Ingrese su edad:");
+                edad = leer.nextInt();
+                System.out.println("Ingrese su direccion:");
+                direccion = sc.nextLine();
+                System.out.println("Ingrese su telefono:");
+                telefono = sc.nextLine();
+                System.out.println("Ingrese su area de trabajo:");
+                aretra = sc.nextLine();
+                System.out.println("Ingrese su tipo de contrato:");
+                contrato = sc.nextLine();
+                System.out.println("Ingrese su horario.");
+                horario = sc.nextLine();
+                System.out.println("Ingrese su mededio de transporte(taxi, bus, moto, carro, caminando, bicicleta, etc):");
+                medtrans = sc.nextLine();
+
+                c [i] = new Administrativo (id, nombre, edad, direccion, telefono, aretra, contrato, horario, medtrans);
+            }
+
+            for(int i = 0 ; i < c.length ; i++){
+                System.out.println("ESPECIFICACIONES:\n" + "\n ID: "+c [i].getid ()+"\n Nombre: "+ c [i].getnombre()+"\n Edad: "+ c [i].getedad()+"\n Direccion: "+ c [i].getdireccion()+"\n Telefono: "+ c [i].gettelefono()+"\n Area de trabajo: "+ c [i].getaretra()+"\n Contrato: "+ c [i].getcontrato()+"\n Horario: "+ c [i].gethorario()+"\n Medio de transporte: "+ c [i].getmedtrans());
+            }
+        }      
+    }  
+}
+
+
+// CLASE ADMINISTRATIVO
+
+package usuario;
+
+public class Administrativo {
+    protected String id;
+    protected String nombre;
+    protected int edad;
+    protected String direccion;
+    protected String telefono;
+    protected String aretra;
+    protected String contrato;
+    protected String horario;
+    protected String medtrans;
+    
+    public Administrativo (){
+        
+        this.id = "";
+        this.nombre = "";
+        this.edad = 0;
+        this.direccion = "";
+        this.telefono = "";
+        this.aretra = "";
+        this.contrato = "";
+        this.horario = "";
+        this.medtrans = "";
+    }
+    
+    public Administrativo (String id, String nombre,int edad,String direccion, String telefono, String aretra, String contrato, String horario, String medtrans){
+        this.id = id;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.aretra = aretra;
+        this.contrato = contrato;
+        this.horario = horario;
+        this.medtrans = medtrans;
+    }
+    
+    public String getid(){
+        return id;
+    }
+    
+    public void setid( String id){
+        this.id = id;
+    }
+    
+    public String getnombre(){
+        return nombre;
+    }
+    
+    public void setnombre(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public int getedad (){
+        return edad;
+    }
+    
+    public void setedad (int edad){
+        this.edad = edad;
+    }
+    
+    public String getdireccion(){
+        return direccion;
+    }
+    
+    public void setdireccion (String direccion){
+        this.direccion = direccion;
+    } 
+    
+    public String gettelefono(){
+        return telefono;
+    }
+    
+    public void settelefono (String telefono){
+        this.telefono = telefono;
+    }
+    
+    public String getaretra(){
+        return aretra;
+    }
+    
+    public void setaretra (String aretra){
+        this.aretra = aretra;
+    }
+    
+    public String getcontrato(){
+        return contrato;
+    }
+    
+    public void setcontrato (String contrato){
+        this.contrato = contrato;
+    }
+    
+    public String gethorario(){
+        return horario;
+    }
+    
+    public void sethorario (String horario){
+        this.horario = horario;
+    }
+    
+    public String getmedtrans(){
+        return medtrans;
+    }
+    
+    public void setmedtrans (String medtrans){
+        this.medtrans = medtrans;
+    }
+}
+
+//CLASE ESTUDIANTE
+
+package usuario;
+
+public class Estudiante {
+    protected String id;
+    protected String nombre;
+    protected int edad;
+    protected String direccion;
+    protected String telefono;
+    protected int año;
+    protected int pension;
+    protected String horario;
+    protected String medtrans;
+    boolean getid;
+    String getedad;
+    String getaño;
+    
+    public Estudiante (){
+        
+        this.id = "";
+        this.nombre = "";
+        this.edad = 0;
+        this.direccion = "";
+        this.telefono = "";
+        this.año = 0;
+        this.pension = 0;
+        this.horario = "";
+        this.medtrans = "";
+    }
+    
+    public Estudiante (String id, String nombre,int edad,String direccion, String telefono, int año, int pension, String horario, String medtrans){
+        this.id = id;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.año = año;
+        this.pension = pension;
+        this.horario = horario;
+        this.medtrans = medtrans;
+    }
+    
+    public String getid(){
+        return id;
+    }
+    
+    public void setid( String id){
+        this.id = id;
+    }
+    
+    public String getnombre(){
+        return nombre;
+    }
+    
+    public void setnombre(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public int getedad (){
+        return edad;
+    }
+    
+    public void setedad (int edad){
+        this.edad = edad;
+    }
+    
+    public String getdireccion(){
+        return direccion;
+    }
+    
+    public void setdireccion (String direccion){
+        this.direccion = direccion;
+    } 
+    
+    public String gettelefono(){
+        return telefono;
+    }
+    
+    public void settelefono (String telefono){
+        this.telefono = telefono;
+    }
+    
+    public int getaño(){
+        return año;
+    }
+    
+    public void setaño (int año){
+        this.año = año;
+    }
+    
+    public int getpension(){
+        return pension;
+    }
+    
+    public void setpension (int pension){
+        this.pension = pension;
+    }
+    
+    public String gethorario(){
+        return horario;
+    }
+    
+    public void sethorario (String horario){
+        this.horario = horario;
+    }
+    
+    public String getmedtrans(){
+        return medtrans;
+    }
+    
+    public void setmedtrans (String medtrans){
+        this.medtrans = medtrans;
+    }
+}
+
+//CLASE DOCENTE
+
+package usuario;
+
+public class Docente {
+    protected String id;
+    protected String nombre;
+    protected int edad;
+    protected String direccion;
+    protected String telefono;
+    protected String asignatura;
+    protected String contrato;
+    protected String horario;
+    protected String medtrans;
+
+    public Docente (){
+        
+        this.id = "";
+        this.nombre = "";
+        this.edad = 0;
+        this.direccion = "";
+        this.telefono = "";
+        this.asignatura = "";
+        this.contrato = "";
+        this.horario = "";
+        this.medtrans = "";
+    }
+    
+    public Docente (String id, String nombre,int edad,String direccion, String telefono, String asignatura, String contrato, String horario, String medtrans){
+        this.id = id;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.asignatura = asignatura;
+        this.contrato = contrato;
+        this.horario = horario;
+        this.medtrans = medtrans;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getAsignatura() {
+        return asignatura;
+    }
+
+    public void setAsignatura(String asignatura) {
+        this.asignatura = asignatura;
+    }
+
+    public String getContrato() {
+        return contrato;
+    }
+
+    public void setContrato(String contrato) {
+        this.contrato = contrato;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public String getMedtrans() {
+        return medtrans;
+    }
+
+    public void setMedtrans(String medtrans) {
+        this.medtrans = medtrans;
+    }
+    
+}
